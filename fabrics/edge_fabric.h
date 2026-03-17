@@ -1,0 +1,8 @@
+#pragma once
+#include "base_fabric.h"
+
+class EdgeDetectionFabric : public BaseFabric {
+public:
+    std::shared_ptr<BaseFilter> Create(const std::vector<std::string> &input_params) override;
+    ~EdgeDetectionFabric() override = default;
+};
