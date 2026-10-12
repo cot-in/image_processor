@@ -22,7 +22,7 @@ void Crystallize::Apply(Image &image) {
     std::ranges::shuffle(pixels, rnd);
     std::vector<std::pair<size_t, size_t>> crystals(
         pixels.begin(), pixels.begin() + std::min(static_cast<size_t>(crystals_count_), pixels.size()));
-    std::vector<std::vector<size_t>> dist(n, std::vector<size_t>(m, SIZE_T_MAX));
+    std::vector<std::vector<size_t>> dist(n, std::vector<size_t>(m, SIZE_MAX));
     std::vector<std::vector<size_t>> parent(n, std::vector<size_t>(m, crystals.size() + 1));
     std::queue<std::pair<size_t, size_t>> q;
     for (size_t i = 0; i < crystals.size(); ++i) {

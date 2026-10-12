@@ -1,4 +1,5 @@
-#include <catch.hpp>
+#include <catch2/catch_test_macros.hpp>
+#include <catch2/matchers/catch_matchers.hpp>
 #include "../fabrics/blur_fabric.h"
 #include "../fabrics/crop_fabric.h"
 #include "../fabrics/crystallize_fabric.h"
